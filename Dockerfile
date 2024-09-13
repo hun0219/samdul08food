@@ -32,6 +32,7 @@ RUN pip install --no-cache-dir --upgrade git+https://github.com/hun0219/samdul08
 
 #@@@@ 모델 서빙을 위해 API 구동을 위한 FastAPI RUN
 # 서버실행시 커맨드 실행 ","가 띄워쓰기임
+# 도커 안에서 reload할 수 있게 하는 명령 추가 --reload
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]
 #CMD ["uvicorn", "src.fishmlserv.main:app", "--host", "0.0.0.0", "--port", "8080"]
 # 포트를 내부적으로 열어준다 8765
