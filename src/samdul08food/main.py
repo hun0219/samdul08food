@@ -32,8 +32,9 @@ def food(name: str):
     # 음식 이름과 시간을 csv로 저장 -> /code/data/food.csv
     # DB 저장
     dt = datetime.datetime.now().strftime('%Y.%m.%d - %H:%M:%S')
-    home_path = os.path.expanduser('~')
-    path = f"{home_path}/code/data"
+    #home_path = os.path.expanduser('~')
+    #path = f"{home_path}/code/data"
+    path = f"/code/data"
     # 폴더 만들기 있으면 패쓰
     os.makedirs(path,exist_ok=True)
     with open(f"{path}/food.csv","a") as f:
