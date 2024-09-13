@@ -18,7 +18,7 @@
             event.preventDefault(); // 폼 기본 제출 방지
 
             const foodName = document.getElementById("foodName").value;
-            const url = `http://localhost:8000/n08/food?name=${encodeURIComponent(foodName)}`;
+            const url = `http://localhost:8456/n08/food?name=${encodeURIComponent(foodName)}`;
 
             fetch(url, {
                 method: 'GET',
