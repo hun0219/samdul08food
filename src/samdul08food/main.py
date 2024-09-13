@@ -1,13 +1,26 @@
 import os
 from typing import Union
 from fastapi import FastAPI
-import pandas as pd
 import datetime
+from fastapi.middleware.cors import CORSMiddleware
 
 #with open(get_model_path(), "rb") as f:
 #    fish_model = pickle.load(f)
 
 app = FastAPI()
+
+origins = [
+    "http://localhost",
+    "http://localhost:8899",
+    "https://samdul08food-1.web.app",
+]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def read_root():
