@@ -24,7 +24,7 @@ COPY src/samdul08food/main.py /code/
 #RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 #RUN pip install --no-cache-dir --upgrade git+https://github.com/hun0219/fishregresstion.git@0.2.0/cli
 #RUN pip install git+https://github.com/hun0219/fishmlserv.git@1.0.0/k
-RUN pip install --no-cache-dir --upgrade git+https://github.com/hun0219/samdul08food.git@0.1.0
+RUN pip install --no-cache-dir --upgrade git+https://github.com/hun0219/samdul08food.git@0.2.0
 
 # 위까지는 이미지를 만들때 처리됨
 #---------------------------------------------------
