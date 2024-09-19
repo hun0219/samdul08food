@@ -45,6 +45,7 @@ def food(name: str):
         f.write(f"{dt},{name}\n")
 
     # Connect to the database
+    #connection = pymysql.connect(host=os.getenv("DB_IP", "172.17.0.1"),
     connection = pymysql.connect(host=os.getenv("DB_IP", "localhost"),
                              user='food',
                              password='1234',
